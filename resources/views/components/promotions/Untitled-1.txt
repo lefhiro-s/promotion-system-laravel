@@ -1,0 +1,7 @@
+usuario:
+l.mora@fmsolutionsgroup.com
+pass:
+leonardo.m2020
+
+Token para conectar a git:
+blftm5q2rhxrchti4edlx25ckfch2yntut46n36uuuvz3keelrua
