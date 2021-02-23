@@ -3,7 +3,7 @@
       <h4 class="title-conditions">Lista de Fotos</h4> 
   </div>
   <div class="col-md-2 text-right">
-      <button class="btn btn-primary create-photos">Agregar</button>
+      <button class="btn btn-primary create-data" value="photos">Agregar</button>
   </div>
 </div>
 <br>
@@ -23,7 +23,7 @@
           <td>{{$photo->id}}</td>
           <td>{{$photo->title_main}}</td>
           <td><a href="{{$photo->url}}">{{$photo->url}}</a></td>
-          <td><button class="btn btn-warning edit-button edit-photos" value ="{{$photo->id}}">
+          <td><button class="btn btn-warning edit-button edit-photos" onclick="promotions._editPhotos({{$photo->id}})">
             <i class="fa fa-edit"></i>Editar</button></td>
         </tr>
         @endforeach
@@ -59,7 +59,7 @@
       <div class="form-group row">
           <div class="offset-md-2 col-md-6 col-sm-6 col-xs-12">              
             <button type="submit" class="btn btn-primary add-photos">Guardar</button>
-            <button type="reset" class="btn btn-default back-list-photos">Volver</button>
+            <button type="reset" class="btn btn-default back-list" value="photos">Volver</button>
           </div>
       </div>
 </form>

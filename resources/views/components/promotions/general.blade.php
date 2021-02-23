@@ -3,7 +3,7 @@
             <h4 class="title-general">Lista de Promociones</h4> 
         </div>
         <div class="col-md-2 text-right">
-            <button class="btn btn-primary create-general">Agregar</button>
+            <button class="btn btn-primary create-data" value="general">Agregar</button>
         </div>
     </div>
     <br>
@@ -23,7 +23,8 @@
                 <td>{{$promotion->id}}</td>
                 <td>{{$promotion->title_main}}</td>
                 <td>{!! $promotion->description!!}</td>
-                <td><button class="btn btn-warning edit-button edit-general" value ="{{$promotion->id}}"><i class="fa fa-edit"></i>Editar</button></td>
+                <td><button class="btn btn-warning edit-button edit-general" onclick="promotions._editGeneral({{$promotion->id}})">
+                    <i class="fa fa-edit"></i>Editar</button></td>
                 </tr>
                 @endforeach
             </tbody>
@@ -155,7 +156,7 @@
             <div class="form-group row">
                 <div class="offset-md-3 col-md-6 col-sm-6 col-xs-12">
                     <button type="submit" class="btn btn-primary add-general">Guardar</button>
-                    <button type="reset" class="btn btn-default back-list-general" id="back-general">Volver</button>
+                    <button type="reset" class="btn btn-default back-list" id="back-general" value="general">Volver</button>
                 </div>
             </div>
     </form>

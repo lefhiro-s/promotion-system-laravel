@@ -3,19 +3,22 @@
 @section('title', 'Promociones')
 
 <script src="../vendor/jquery/jquery.min.js"></script>
+<script src="{{asset('js/lib/object.js')}}"></script>
 <script src="{{asset('js/main/promotions.js')}}"></script>
 
 <link href="{{asset('css/main/promotions.css')}}" rel="stylesheet">
 
 
 <!-- initGui js -->
-<script>$(document).ready(function(){ window.initGUI({
+<script>$(document).ready(function(){window.promotions = new promotions({
+    "data" : {
         "id"  : "{{old('id')}}",
         "tab" : "{{old('tab')}}",
         "status" : "{{old('status')}}",
         "routes" : {
             "update" : "{{route('update-general')}}",
             "edit"   : "{{route('edit-promotion')}}"
+            }
         }
 	});
 }); </script>

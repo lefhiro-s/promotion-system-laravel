@@ -3,7 +3,7 @@
         <h4 class="title-conditions">Lista de Condiciones</h4> 
     </div>
     <div class="col-md-2 text-right">
-        <button class="btn btn-primary create-conditions">Agregar</button>
+        <button class="btn btn-primary create-data" value="conditions">Agregar</button>
     </div>
   </div>
   <br>
@@ -23,7 +23,7 @@
             <td>{{$condition->id}}</td>
             <td>{{$condition->title_main}}</td>
             <td>{!!$condition->description!!}</td>
-            <td><button class="btn btn-warning edit-button edit-conditions" value ="{{$condition->id}}">
+            <td><button class="btn btn-warning edit-button edit-conditions" onclick="promotions._editConditions({{$condition->id}})">
                 <i class="fa fa-edit"></i>Editar</button></td>
           </tr>
           @endforeach
@@ -59,7 +59,7 @@
       <div class="form-group row">
         <div class="offset-md-2 col-md-6 col-sm-6 col-xs-12">
             <button type="submit" class="btn btn-primary add-conditions">Guardar</button>
-            <button type="reset" class="btn btn-default back-list-conditions">Volver</button>
+            <button type="reset" class="btn btn-default back-list" value="conditions">Volver</button>
         </div>
       </div>
   </form>

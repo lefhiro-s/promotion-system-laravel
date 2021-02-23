@@ -3,7 +3,7 @@
         <h4 class="title-conditions">Lista de Items</h4> 
     </div>
     <div class="col-md-2 text-right">
-        <button class="btn btn-primary create-items">Agregar</button>
+        <button class="btn btn-primary create-data" value="items">Agregar</button>
     </div>
 </div>
 <br>
@@ -31,7 +31,7 @@
             <td>{{$item->quantity}}</td>
             <td>{{$item->total_sale}}</td>
             <td>{{$item->comission_site}}</td>
-            <td><button class="btn btn-warning edit-button edit-items" value ="{{$item->id}}">
+            <td><button class="btn btn-warning edit-button edit-items" onclick="promotions._editItems({{$item->id}})">
                 <i class="fa fa-edit"></i>Editar</button></td>
             </tr>
             @endforeach
@@ -103,7 +103,7 @@
         <div class="form-group row">
             <div class="offset-md-3 col-md-6 col-sm-6 col-xs-12">
                 <button type="submit" class="btn btn-primary add-items">Guardar</button>
-                <button type="reset" class="btn btn-default back-list-items">Volver</button>
+                <button type="reset" class="btn btn-default back-list" value="items">Volver</button>
             </div>
         </div>
 </form>
