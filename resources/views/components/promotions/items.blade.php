@@ -3,7 +3,7 @@
         <h4 class="title-conditions">Lista de Items</h4> 
     </div>
     <div class="col-md-2 text-right">
-        <button class="btn btn-primary create-data" value="items">Agregar</button>
+        <button class="btn btn-primary create-data create-items" value="items">Agregar</button>
     </div>
 </div>
 <br>

@@ -3,7 +3,7 @@
       <h4 class="title-conditions">Lista de Fotos</h4> 
   </div>
   <div class="col-md-2 text-right">
-      <button class="btn btn-primary create-data" value="photos">Agregar</button>
+      <button class="btn btn-primary create-data create-photos" value="photos">Agregar</button>
   </div>
 </div>
 <br>

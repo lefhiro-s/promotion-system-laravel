@@ -36,6 +36,7 @@ Route::group(['middleware' => ['web','custom_auth']], function () {
     Route::post('/update-conditions', [App\Http\Controllers\PromotionController::class, 'updateCondition'])->name('update-conditions');
     Route::post('/update-items', [App\Http\Controllers\PromotionController::class, 'updateItem'])->name('update-items');
     Route::post('/update-photos', [App\Http\Controllers\PromotionController::class, 'updatePhoto'])->name('update-photos');
+    Route::post('/coordinate-map', [App\Http\Controllers\PromotionController::class, 'coordinateMap'])->name('coordinate-map');
     Route::get('/edit-promotion', [App\Http\Controllers\PromotionController::class, 'editPromotion'])->name('edit-promotion');
     Route::get('/edit-conditions', [App\Http\Controllers\PromotionController::class, 'editCondition'])->name('edit-conditions');
     Route::get('/edit-items', [App\Http\Controllers\PromotionController::class, 'editItems'])->name('edit-items');

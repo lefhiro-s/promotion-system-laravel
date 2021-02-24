@@ -3,7 +3,7 @@
             <h4 class="title-general">Lista de Promociones</h4> 
         </div>
         <div class="col-md-2 text-right">
-            <button class="btn btn-primary create-data" value="general">Agregar</button>
+            <button class="btn btn-primary create-data create-general" value="general">Agregar</button>
         </div>
     </div>
     <br>

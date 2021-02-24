@@ -33,7 +33,8 @@ class PromotionController extends Controller
     {
         $data = [
             'status'  => $request->status ?: -1,
-            'tab'     => $request['tab']  ?: 'general'
+            'tab'     => $request['tab']  ?: 'general',
+            'api_key' => env('API_KEY_GOOGLE_MAPS', "AIzaSyCtwRY13QMoUSmR5zaMDdAnAZpTBZK-UQY")
         ];
 
         return view('promotions', $data);
@@ -215,6 +216,26 @@ class PromotionController extends Controller
         ];
         
         return redirect()->route('promotions')->withInput($data);
+    }
+
+    public function coordinateMap(Request $request)
+    {
+        try {
+        
+            $data = [
+                "code" => 0,
+                "html" => view('components.frames.map_coordinates')->render()
+            ];
+
+        } catch (\Throwable $th) {
+            $data = [
+                "code" => -1,
+                "error" => $th
+            ];
+        }
+
+
+        return json_encode($data);
     }
      
 }

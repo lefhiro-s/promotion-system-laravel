@@ -3,6 +3,7 @@
 @section('title', 'Promociones')
 
 <script src="../vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{$api_key}}"></script>
 <script src="{{asset('js/lib/object.js')}}"></script>
 <script src="{{asset('js/main/promotions.js')}}"></script>
 
@@ -15,6 +16,7 @@
         "id"  : "{{old('id')}}",
         "tab" : "{{old('tab')}}",
         "status" : "{{old('status')}}",
+        "token"  : "{{csrf_token()}}",
         "routes" : {
             "update" : "{{route('update-general')}}",
             "edit"   : "{{route('edit-promotion')}}"
@@ -65,4 +67,6 @@
         </div>
     </div>
 </div>
+
+<x-frames.modal/>
 @endsection

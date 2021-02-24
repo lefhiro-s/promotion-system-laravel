@@ -3,7 +3,7 @@
         <h4 class="title-conditions">Lista de Condiciones</h4> 
     </div>
     <div class="col-md-2 text-right">
-        <button class="btn btn-primary create-data" value="conditions">Agregar</button>
+        <button class="btn btn-primary create-data create-conditions" value="conditions">Agregar</button>
     </div>
   </div>
   <br>
